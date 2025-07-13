@@ -1,0 +1,58 @@
+$ff-primary: 'Bellefair', sans-serif;
+$ff-secondary: 'Barlow Condensed', sans-serif;
+$ff-tertiary: 'Barlow', sans-serif;
+
+$fs-1: 9rem; // 144px
+$fs-2: 6rem; // 96px
+$fs-3: 5rem; // 80px
+$fs-4: 3.5rem; // 56px
+$fs-5: 2.5rem; // 40px
+$fs-6: 2rem; // 32px
+$fs-7: 1.75rem; // 28px
+$fs-8: 1.5rem; // 24px
+$fs-9: 1.25rem; // 20px
+$fs-10: 1.125rem; // 18px
+$fs-11: 1rem; // 16px
+$fs-12: 0.938rem; // 15px
+$fs-13: 0.875rem; // 14px
+
+.number {
+    font-weight: 700;
+    padding-inline-end: $sp-200;
+    opacity: 0.25;
+}
+
+.title {
+    @include font($font-family: $ff-secondary, $font-size: clamp($fs-11, 4vw, $fs-9));
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.page.title {
+    font-weight: 400;
+    letter-spacing: 15%;
+
+    @include respond-up("tablet") {
+       align-self: flex-start;
+    }
+
+    @include respond-up("desktop") {
+       font-size: clamp($fs-9, 4vw, $fs-7);  
+    }
+}
+
+.hero .text-container p:nth-child(2) {
+    @include font($font-family: $ff-primary, $font-size: clamp($fs-3, 20vw, $fs-1));
+}
+
+.desc {
+    @include font($font-family: $ff-tertiary, $font-size: clamp($fs-13, 4vw, $fs-10));
+    text-align: center;
+    line-height: 180%;
+    color: var(--blue300);
+    width: 100%;
+
+    @include respond-up("desktop") {
+       text-align: left;
+    }
+}

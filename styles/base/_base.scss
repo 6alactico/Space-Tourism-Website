@@ -1,0 +1,134 @@
+:root {
+    --blue300: hsl(231, 77%, 90%);
+    --blue900: hsl(230, 35%, 7%);
+    --white: hsl(0, 0%, 100%);
+    --nav-bg-mobile: rgba(11, 13, 23, 0.15);
+    --nav-bg-others: rgba(255, 255, 255, 0.05);
+
+    --border: 3px solid transparent;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+
+    &:visited {
+        color: var(--white);
+    }
+}
+
+ul { 
+    list-style-type: none;
+}
+
+button, .dot, .tabs {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#content {
+    justify-self: center;
+    position: relative;
+    height: 55.5rem;
+    margin: auto;
+    width: 100%;
+    max-width: 90rem;
+    color: var(--white);
+}
+
+#content, .fade {
+    position: relative;
+    align-items: flex-start;
+    min-height: 100%;
+    width: 100%;
+}
+
+.background-image {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    max-width: 90rem;
+    height: 100%;
+    z-index: -1;
+    margin: auto;
+    
+    img {
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.fade {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: auto;
+}
+
+.fade:not(.fade-active) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fade.is-transitioning {
+  pointer-events: none;
+}
+main {
+    position: relative;
+    align-items: center;
+    gap: $sp-300;
+    flex: 1 0 0;
+    width: 100%;
+    height: 55.5rem;
+
+    @include respond-up("tablet") {
+        align-self: center;
+    }
+}
+
+main.home {
+    padding: clamp($sp-300, 24vw, $sp-1600) clamp($sp-300, 24vw, $sp-500);
+}
+
+main.pages {
+    padding: clamp($sp-300, 8vw, $sp-500) clamp($sp-300, 8vw, $sp-500);
+    transition: width 0.5s ease;
+    @include respond-up("desktop") {
+        padding-inline: 0;
+        padding-block: $sp-600;
+    }
+}
+
+main.active {
+    display: flex;
+}
+
+.main-content {
+    @include contentAlign;
+    width: 100%;
+    max-width: 69.375rem;
+    height: 100%;
+    justify-self: center;
+}

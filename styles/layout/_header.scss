@@ -1,0 +1,41 @@
+header {
+    position: relative;
+    padding-block: $sp-300;
+    align-self: stretch;
+
+    @include respond-up("tablet") {
+        padding-block: $sp-0;
+    }
+    
+    @include respond-up("desktop") {
+        padding-block: $sp-500 $sp-0;
+    }
+}
+
+.logo {
+    position: relative;
+    padding-left: $sp-300;
+    align-items: center;
+    gap: $sp-800;
+    flex: 1 0 0;
+    min-width: 10rem;
+
+    @include respond-up("desktop") {
+        .line {
+            height: 0.0625rem;
+            flex: 1 0 0;
+            opacity: 0.25;
+            background: var(--white);
+            z-index: 3;
+        }
+    }
+}
+
+#btn-menu {
+    padding-right: $sp-300;
+    justify-content: center;
+    align-items: flex-end;
+    gap: $sp-100;
+    flex: 1 0 0;
+    align-self: stretch;
+}

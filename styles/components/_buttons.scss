@@ -1,0 +1,60 @@
+.explore-btn {
+    width: 32rem;
+    max-width: 33.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: $sp-300;
+    height: 23.875rem;
+
+     @include respond-up("desktop") {
+       align-items: flex-end;
+       height: auto;
+    }
+}
+
+#btn-close {
+    display: flex;
+    padding-right: $sp-300;
+    flex-direction: column;
+    padding-block: $sp-400;
+    align-items: flex-end;
+}
+
+#explore {
+    width: clamp(9rem, 40vw, 17rem);
+    height: clamp(9rem, 40vw, 17rem);
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    background: var(--white);
+    font-family: $ff-primary;
+    font-size: clamp($fs-10, 4vw, $fs-6);
+    text-transform: uppercase;
+    
+    &::before {
+        border-radius: inherit;
+        content: "";
+        position: absolute;
+        border: 10rem solid var(--white);
+        transition: border 0.5s ease-in, opacity 0.5s ease-in;
+        opacity: 0;
+        z-index: 2;
+        color: hsl(0, 0%, 50%);
+
+        @include respond-up("tablet") {
+            border-width: 12rem;
+        }
+    }
+
+    &:hover::before {
+        opacity: .2;
+    }
+
+}
+
+@include respond-up("tablet") {
+    .menu-btn {
+        display: none !important;
+    }
+}

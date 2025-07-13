@@ -1,0 +1,83 @@
+// TEXT
+@mixin font($font-family, $font-size) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: normal;
+  font-weight: 400;
+}
+
+@mixin description($height: 8.4375rem) {
+  @include font($font-family: $ff-tertiary, $font-size: clamp($fs-12, 4vw, $fs-11));
+  height: $height;
+  line-height: 180%;
+  color: var(--blue300);
+}
+
+// LAYOUT
+@mixin contentHeader($gap: $sp-200) {
+    @include flex-container;
+    align-items: flex-start;
+    gap: $gap;
+    align-items: center;
+    align-self: stretch;
+}
+
+@mixin contentAlign {
+    @include flex-container;
+    align-items: center;
+    justify-content: center;
+    gap: $sp-300;
+}
+
+@mixin explanation($padding-top: $sp-500) {
+  @include flex-container;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  padding-top: $padding-top;
+  gap: clamp($sp-300, 4vw, $sp-500);
+}
+
+// FLEXBOX
+@mixin flex-container($direction: column) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+.flex-column {
+    @include flex-container;
+}
+
+.flex-row {
+    @include flex-container($direction: row);
+}
+
+$breakpoints: (
+  "desktop": 64rem,
+  "tablet": 48rem,
+  "mobile": 23.438rem
+);
+
+@mixin respond-up($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found.";
+  }
+}
+
+@mixin respond-down($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value {
+    @media (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found.";
+  }
+}

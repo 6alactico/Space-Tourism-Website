@@ -1,0 +1,71 @@
+nav {
+    z-index: 1;
+    gap: $sp-600;
+    backdrop-filter: blur(40px);
+    
+    @include respond-down("tablet") {
+        position: absolute;
+        inset: 0 0 auto auto;
+        padding-left: $sp-400;
+        width: 15.875rem;
+        height: 100vh;
+        background: var(--nav-bg-mobile);
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+
+        &.active {
+            transform: translateX(0);
+        }
+    }
+
+    @include respond-up("tablet") {
+        position: static;
+        justify-content: flex-end;
+        background: var(--nav-bg-others);
+        width: 40rem;
+        height: 6rem;
+        padding-left: $sp-0;
+        margin-left: -2rem;
+    }
+}
+
+.nav-links {
+    @include font($font-family: $ff-secondary, $font-size: $fs-11);
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    gap: $sp-400;
+
+    @include respond-up("tablet") {
+        padding-inline: clamp($sp-500, 4vw, $sp-800);
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 100%;
+    }
+    
+    li {
+        transition: border-color 0.5s ease-in;
+        @include respond-down("tablet") {
+            border-right: var(--border);
+        }
+        
+        @include respond-up("tablet") {
+            border-bottom: var(--border);
+            justify-content: center;
+            height: 100%;
+        }
+
+        &:hover {
+            border-color: hsl(0, 0%, 50%);
+        }
+        
+         &.active {
+            border-color: var(--white);
+        }
+
+        .nav-number {
+            font-weight: 700;
+            letter-spacing: 0.16875rem;
+            padding-inline-end: $sp-150;
+        }
+    }
+}

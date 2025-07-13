@@ -1,5 +1,19 @@
 {
-  "destinations": [
+  "home": {
+    "background": {
+      "mobile": "/assets/home/background-home-mobile.jpg",
+      "tablet": "/assets/home/background-home-tablet.jpg",
+      "desktop": "/assets/home/background-home-desktop.jpg"
+    }
+  },
+  "destinations": {
+  "background": {
+      "mobile": "/assets/destination/background-destination-mobile.jpg",
+      "tablet": "/assets/destination/background-destination-tablet.jpg",
+      "desktop": "/assets/destination/background-destination-desktop.jpg"
+    },
+
+  "items": [
     {
       "name": "Moon",
       "images": {
@@ -40,8 +54,15 @@
       "distance": "1.6 bil. km",
       "travel": "7 years"
     }
-  ],
-  "crew": [
+  ]
+},
+  "crew": {
+    "background": {
+    "mobile": "/assets/crew/background-crew-mobile.jpg",
+    "tablet": "/assets/crew/background-crew-tablet.jpg",
+    "desktop": "/assets/crew/background-crew-desktop.jpg"
+  },
+  "items": [
     {
       "name": "Douglas Hurley",
       "images": {
@@ -78,8 +99,17 @@
       "role": "Flight Engineer",
       "bio": "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
     }
-  ],
-  "technology": [
+  ]
+},
+
+  "technology": {
+    "background": {
+      "mobile": "/assets/technology/background-technology-mobile.jpg",
+      "tablet": "/assets/technology/background-technology-tablet.jpg",
+      "desktop": "/assets/technology/background-technology-desktop.jpg"
+    },
+
+  "items": [
     {
       "name": "Launch vehicle",
       "images": {
@@ -104,5 +134,6 @@
       },
       "description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
     }
-  ]
+    ]
+  }
 }

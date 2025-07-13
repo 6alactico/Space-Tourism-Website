@@ -1,0 +1,53 @@
+@include respond-up("desktop") {
+    .content.tech {
+        flex-direction: row-reverse;
+        max-width: 79.6875rem;
+    }
+
+    .main-content.tech {
+        max-width: 79.6875rem;
+        justify-self: flex-end;
+    }
+}
+
+.tech-images {
+    width: 100vw;
+    padding-top: 4rem;
+    overflow: hidden;
+
+    @include respond-up("mobile") {
+        height: 22.3125rem;
+    }
+
+    @include respond-up("desktop") {
+        padding-top: 0;
+        width: 38rem;
+        height: 45.875rem;
+        margin-left: 0;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100vw;
+        height: auto;
+        object-fit: cover;
+        display: block;
+
+        @include respond-up("desktop") {
+            width: 100%;
+            max-width: 38rem;
+            max-height: 37.5rem;
+        }
+    }
+}
+
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp($sp-500, 5vw, $sp-800);
+
+    @include respond-up("desktop") {
+        flex-direction: row;
+    }
+}

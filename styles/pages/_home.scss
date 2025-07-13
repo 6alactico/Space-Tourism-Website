@@ -1,0 +1,39 @@
+.hero {
+    align-items: center;
+    gap: $sp-600;
+    flex: 1 0 0;
+    align-self: stretch;
+
+    @include respond-up("desktop") {
+        max-width: 69.375rem;
+        position: absolute;
+        bottom: 0;
+        flex-direction: row;
+        justify-self: center;
+        align-self: flex-end;
+    }
+}
+
+.content {
+    height: 45.875rem;
+    align-items: center;
+    flex: 1 0 0;
+    gap: $sp-400;
+
+    @include respond-up("desktop") {
+        max-width: 69.375rem;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.text-container {
+    @include contentAlign;
+    max-width: 33.75rem;
+
+    @include respond-up("desktop") {
+        align-items: flex-start;
+        height: 39.4375rem;
+    }
+}
