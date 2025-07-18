@@ -9,8 +9,7 @@
         position: absolute;
         bottom: 0;
         flex-direction: row;
-        justify-self: center;
-        align-self: flex-end;
+        place-self: flex-end center;
     }
 }
 
@@ -30,10 +29,8 @@
 
 .text-container {
     @include contentAlign;
-    max-width: 33.75rem;
 
     @include respond-up("desktop") {
         align-items: flex-start;
-        height: 39.4375rem;
     }
 }

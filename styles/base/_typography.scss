@@ -50,7 +50,7 @@ $fs-13: 0.875rem; // 14px
     text-align: center;
     line-height: 180%;
     color: var(--blue300);
-    width: 100%;
+    
 
     @include respond-up("desktop") {
        text-align: left;

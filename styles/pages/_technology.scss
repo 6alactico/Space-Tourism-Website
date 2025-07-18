@@ -13,31 +13,17 @@
 .tech-images {
     width: 100vw;
     padding-top: 4rem;
-    overflow: hidden;
+    height: clamp(22.3125rem, 64vw, 37.5rem);
 
-    @include respond-up("mobile") {
-        height: 22.3125rem;
-    }
-
-    @include respond-up("desktop") {
-        padding-top: 0;
-        width: 38rem;
-        height: 45.875rem;
-        margin-left: 0;
+    @include respond-up("desktop") { 
+        padding-top: 0; 
+        max-width: 38rem;
     }
 
     img {
-        width: 100%;
-        max-width: 100vw;
-        height: auto;
-        object-fit: cover;
         display: block;
-
-        @include respond-up("desktop") {
-            width: 100%;
-            max-width: 38rem;
-            max-height: 37.5rem;
-        }
+        width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -45,9 +31,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 85%;
     gap: clamp($sp-500, 5vw, $sp-800);
 
-    @include respond-up("desktop") {
-        flex-direction: row;
-    }
+    @include respond-up("desktop") { flex-direction: row; }
 }

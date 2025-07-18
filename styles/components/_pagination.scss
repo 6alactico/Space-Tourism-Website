@@ -30,7 +30,7 @@
 }
 
 .sm-dots {
-    background-color: hsl(0, 0, 50%);
+    background-color: hsl(0deg 0 50%);
     opacity: 0.1744;
     width: clamp(0.625rem, 1vw, 0.9375rem);
     height: clamp(0.625rem, 1vw, 0.9375rem);
@@ -41,22 +41,24 @@
     }
 
     &:hover {
-        background-color: hsl(0, 0%, 80%);
+        background-color: hsl(0deg 0% 80%);
         opacity: 0.5;
     }
 }
 
 .lg-dots {
     @include font($font-family: $ff-primary, $font-size: clamp($fs-10, 4vw, $fs-8));
+
     color: var(--white);
     border-radius: 50%;
-    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    border: 1.5px solid rgb(255 255 255 / 25%);
     width: clamp(2.5rem, 6vw, 3.5rem);
     height: clamp(2.5rem, 6vw, 3.5rem);
     transition: border-color 0.5s ease, opacity 0.5s ease;
 
     @include respond-up("desktop") {
         @include font($font-family: $ff-primary, $font-size: clamp($fs-8, 12vw, $fs-6));
+
         width: clamp(3.5rem, 12vw, 5rem);
         height: clamp(3.5rem, 12vw, 5rem);
     }

@@ -1,10 +1,9 @@
 :root {
-    --blue300: hsl(231, 77%, 90%);
-    --blue900: hsl(230, 35%, 7%);
-    --white: hsl(0, 0%, 100%);
-    --nav-bg-mobile: rgba(11, 13, 23, 0.15);
-    --nav-bg-others: rgba(255, 255, 255, 0.05);
-
+    --blue300: hsl(231deg 77% 90%);
+    --blue900: hsl(230deg 35% 7%);
+    --white: hsl(0deg 0% 100%);
+    --nav-bg-mobile: rgb(11 13 23 / 15%);
+    --nav-bg-others: rgb(255 255 255 / 5%);
     --border: 3px solid transparent;
 }
 
@@ -95,6 +94,7 @@ img {
 .fade.is-transitioning {
   pointer-events: none;
 }
+
 main {
     position: relative;
     align-items: center;
@@ -113,8 +113,9 @@ main.home {
 }
 
 main.pages {
-    padding: clamp($sp-300, 8vw, $sp-500) clamp($sp-300, 8vw, $sp-500);
+    padding: clamp($sp-300, 8vw, $sp-500);
     transition: width 0.5s ease;
+
     @include respond-up("desktop") {
         padding-inline: 0;
         padding-block: $sp-600;
@@ -127,6 +128,7 @@ main.active {
 
 .main-content {
     @include contentAlign;
+
     width: 100%;
     max-width: 69.375rem;
     height: 100%;

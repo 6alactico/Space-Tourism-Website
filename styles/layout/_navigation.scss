@@ -31,6 +31,7 @@ nav {
 
 .nav-links {
     @include font($font-family: $ff-secondary, $font-size: $fs-11);
+
     text-transform: uppercase;
     letter-spacing: 0.125rem;
     gap: $sp-400;
@@ -44,6 +45,7 @@ nav {
     
     li {
         transition: border-color 0.5s ease-in;
+
         @include respond-down("tablet") {
             border-right: var(--border);
         }
@@ -55,7 +57,7 @@ nav {
         }
 
         &:hover {
-            border-color: hsl(0, 0%, 50%);
+            border-color: hsl(0deg 0% 50%);
         }
         
          &.active {

@@ -40,7 +40,7 @@
         transition: border 0.5s ease-in, opacity 0.5s ease-in;
         opacity: 0;
         z-index: 2;
-        color: hsl(0, 0%, 50%);
+        color: hsl(0deg 0% 50%);
 
         @include respond-up("tablet") {
             border-width: 12rem;

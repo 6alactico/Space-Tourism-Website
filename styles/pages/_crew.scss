@@ -4,16 +4,17 @@
     @include respond-up("desktop") {
         justify-content: center;
         padding-top: $sp-0;
+        width: 50%;
     }
 }
 
 .page-header {
     @include font($font-family: $ff-primary, $font-size: clamp($fs-11, 4vw, $fs-7));
     @include flex-container;
-    align-items: flex-start;
-    gap: $sp-200;
+
     align-items: center;
     align-self: stretch;
+    gap: $sp-200;
     text-transform: uppercase;
     
     @include respond-up("desktop") {
@@ -31,9 +32,7 @@
     }
 }
 
-.desc.crew {
-    height: 10.25rem;
-}
+.desc.crew { height: 10.25rem; }
 
 .crew-name, .term-name {
     @include font($font-family: $ff-primary, $font-size: clamp($fs-8, 4vw, $fs-5));
@@ -47,23 +46,18 @@
     justify-content: center;
     align-items: center;
     width: clamp(16.9544rem, 40vw, 27.92488rem);
+    height: 100%;
 
     @include respond-up("tablet") {
-        width: clamp(27.92488rem, 40vw, 33.7051rem);
+        width: clamp(27.92488rem, 64vw, 33.7051rem);
         object-position: 0 0%;
-    }
-
-    @include respond-up("desktop") {
-        height: 45.875rem;
-        width: 33.75rem;
     }
 
     img {
         flex-shrink: 0;
-        -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
         mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
         height: auto;
-        width: auto;
+     
         
         @include respond-up("desktop") {
             max-height: 42.25rem;
